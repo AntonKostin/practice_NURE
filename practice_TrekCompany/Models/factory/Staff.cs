@@ -5,11 +5,14 @@ namespace practice_TrekCompany.Models.factory
 {
     public class Staff
     {
+        //Модель для таблицы factory.Staff
         [Key]
         public int staffId { get; set; }
+        //Подключение модели
         [ForeignKey("Factory")]
         public int factoryId { get; set; }
         public Factory Factory { get; set; }
+        //Подключение модели
         [ForeignKey("JobTitle")]
         public int jobTitleId { get; set; }
         public JobTitle JobTitle { get; set; }

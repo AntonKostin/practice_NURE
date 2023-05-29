@@ -4,6 +4,7 @@ namespace practice_TrekCompany.Models.factory
 {
     public class Factory
     {
+        //Модель для таблицы factory.Factory
         [Key]
         public int factoryId { get; set; }
         public string city { get; set; }
