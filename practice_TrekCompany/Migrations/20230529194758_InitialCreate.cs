@@ -5,7 +5,7 @@
 namespace practice_TrekCompany.Migrations
 {
     /// <inheritdoc />
-    public partial class InitualCreate : Migration
+    public partial class InitialCreate : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -231,7 +231,7 @@ namespace practice_TrekCompany.Migrations
                 });
 
             migrationBuilder.CreateTable(
-                name: "Stem",
+                name: "Stems",
                 columns: table => new
                 {
                     stemId = table.Column<int>(type: "int", nullable: false)
@@ -240,7 +240,7 @@ namespace practice_TrekCompany.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Stem", x => x.stemId);
+                    table.PrimaryKey("PK_Stems", x => x.stemId);
                 });
 
             migrationBuilder.CreateTable(
@@ -269,6 +269,19 @@ namespace practice_TrekCompany.Migrations
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_Tires", x => x.tireId);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "TypeOfBikes",
+                columns: table => new
+                {
+                    typeOfBikeId = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    typeName = table.Column<string>(type: "nvarchar(max)", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_TypeOfBikes", x => x.typeOfBikeId);
                 });
 
             migrationBuilder.CreateTable(
@@ -377,9 +390,9 @@ namespace practice_TrekCompany.Migrations
                         principalColumn: "steeringId",
                         onDelete: ReferentialAction.Cascade);
                     table.ForeignKey(
-                        name: "FK_Equipments_Stem_stemId",
+                        name: "FK_Equipments_Stems_stemId",
                         column: x => x.stemId,
-                        principalTable: "Stem",
+                        principalTable: "Stems",
                         principalColumn: "stemId",
                         onDelete: ReferentialAction.Cascade);
                 });
@@ -498,7 +511,8 @@ namespace practice_TrekCompany.Migrations
                     framesetId = table.Column<int>(type: "int", nullable: false),
                     wheelsetId = table.Column<int>(type: "int", nullable: false),
                     groopsetId = table.Column<int>(type: "int", nullable: false),
-                    equipmentId = table.Column<int>(type: "int", nullable: false)
+                    equipmentId = table.Column<int>(type: "int", nullable: false),
+                    typeOfBikeId = table.Column<int>(type: "int", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -522,6 +536,12 @@ namespace practice_TrekCompany.Migrations
                         principalColumn: "groopsetId",
                         onDelete: ReferentialAction.Cascade);
                     table.ForeignKey(
+                        name: "FK_Bikes_TypeOfBikes_typeOfBikeId",
+                        column: x => x.typeOfBikeId,
+                        principalTable: "TypeOfBikes",
+                        principalColumn: "typeOfBikeId",
+                        onDelete: ReferentialAction.Cascade);
+                    table.ForeignKey(
                         name: "FK_Bikes_Wheelsets_wheelsetId",
                         column: x => x.wheelsetId,
                         principalTable: "Wheelsets",
@@ -543,6 +563,11 @@ namespace practice_TrekCompany.Migrations
                 name: "IX_Bikes_groopsetId",
                 table: "Bikes",
                 column: "groopsetId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Bikes_typeOfBikeId",
+                table: "Bikes",
+                column: "typeOfBikeId");
 
             migrationBuilder.CreateIndex(
                 name: "IX_Bikes_wheelsetId",
@@ -669,6 +694,9 @@ namespace practice_TrekCompany.Migrations
                 name: "Groopsets");
 
             migrationBuilder.DropTable(
+                name: "TypeOfBikes");
+
+            migrationBuilder.DropTable(
                 name: "Wheelsets");
 
             migrationBuilder.DropTable(
@@ -696,7 +724,7 @@ namespace practice_TrekCompany.Migrations
                 name: "Steerings");
 
             migrationBuilder.DropTable(
-                name: "Stem");
+                name: "Stems");
 
             migrationBuilder.DropTable(
                 name: "Forks");

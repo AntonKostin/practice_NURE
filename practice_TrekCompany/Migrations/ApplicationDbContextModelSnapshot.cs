@@ -120,6 +120,9 @@ namespace practice_TrekCompany.Migrations
                     b.Property<int>("groopsetId")
                         .HasColumnType("int");
 
+                    b.Property<int>("typeOfBikeId")
+                        .HasColumnType("int");
+
                     b.Property<int>("wheelsetId")
                         .HasColumnType("int");
 
@@ -130,6 +133,8 @@ namespace practice_TrekCompany.Migrations
                     b.HasIndex("framesetId");
 
                     b.HasIndex("groopsetId");
+
+                    b.HasIndex("typeOfBikeId");
 
                     b.HasIndex("wheelsetId");
 
@@ -233,6 +238,23 @@ namespace practice_TrekCompany.Migrations
                     b.HasIndex("transmitionId");
 
                     b.ToTable("Groopsets");
+                });
+
+            modelBuilder.Entity("practice_TrekCompany.Models.production.TypeOfBike", b =>
+                {
+                    b.Property<int>("typeOfBikeId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("typeOfBikeId"));
+
+                    b.Property<string>("typeName")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("typeOfBikeId");
+
+                    b.ToTable("TypeOfBikes");
                 });
 
             modelBuilder.Entity("practice_TrekCompany.Models.production.Wheelset", b =>
@@ -379,7 +401,7 @@ namespace practice_TrekCompany.Migrations
 
                     b.HasKey("stemId");
 
-                    b.ToTable("Stem");
+                    b.ToTable("Stems");
                 });
 
             modelBuilder.Entity("practice_TrekCompany.Models.spares.sparesFrameset.Fork", b =>
@@ -664,6 +686,12 @@ namespace practice_TrekCompany.Migrations
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
+                    b.HasOne("practice_TrekCompany.Models.production.TypeOfBike", "TypeOfBike")
+                        .WithMany()
+                        .HasForeignKey("typeOfBikeId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
                     b.HasOne("practice_TrekCompany.Models.production.Wheelset", "Wheelset")
                         .WithMany()
                         .HasForeignKey("wheelsetId")
@@ -675,6 +703,8 @@ namespace practice_TrekCompany.Migrations
                     b.Navigation("Frameset");
 
                     b.Navigation("Groopset");
+
+                    b.Navigation("TypeOfBike");
 
                     b.Navigation("Wheelset");
                 });
