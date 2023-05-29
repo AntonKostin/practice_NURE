@@ -33,6 +33,7 @@ namespace practice_TrekCompany.Data
         public DbSet<Saddle> Saddles { get; set; }
         public DbSet<SeatPost> SeatPosts { get; set; }
         public DbSet<Steering> Steerings { get; set; }
+        public DbSet<Stem> Stems { get; set; }
         public DbSet<Wheelset> Wheelsets { get; set; }
         public DbSet<Groopset> Groopsets { get; set; }
         public DbSet<Frameset> Framesets { get; set; }
@@ -41,5 +42,6 @@ namespace practice_TrekCompany.Data
         public DbSet<Staff> Staffs { get; set; }
         public DbSet<JobTitle> JobTitles { get; set; }
         public DbSet<Factory> Factories { get; set; }
+        public DbSet<TypeOfBike> TypeOfBikes { get; set; }
     }
 }

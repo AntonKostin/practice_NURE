@@ -25,5 +25,8 @@ namespace practice_TrekCompany.Models.production
         [ForeignKey("Equipment")]
         public int equipmentId { get; set; }
         public Equipment Equipment { get; set; }
+        [ForeignKey("TypeOfBike")]
+        public int typeOfBikeId { get; set; }
+        public TypeOfBike TypeOfBike { get; set; }
     }
 }
