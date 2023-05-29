@@ -1,8 +1,8 @@
 ﻿using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
-using practice_TrekCompany.Models.sparesTransmition;
+using practice_TrekCompany.Models.spares.sparesTransmition;
 
-namespace practice_TrekCompany.Models.sparesGroopset
+namespace practice_TrekCompany.Models.spares.sparesGroopset
 {
     public class Transmition
     {

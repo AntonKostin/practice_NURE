@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
-namespace practice_TrekCompany.Models.sparesGroopset
+namespace practice_TrekCompany.Models.spares.sparesGroopset
 {
     public class Pedals
     {

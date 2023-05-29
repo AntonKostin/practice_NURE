@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
-namespace practice_TrekCompany.Models.sparesWheelset
+namespace practice_TrekCompany.Models.spares.sparesWheelset
 {
     public class Tire
     {

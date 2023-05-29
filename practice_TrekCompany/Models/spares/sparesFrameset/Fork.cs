@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
-namespace practice_TrekCompany.Models.sparesFrameset
+namespace practice_TrekCompany.Models.spares.sparesFrameset
 {
     public class Fork
     {

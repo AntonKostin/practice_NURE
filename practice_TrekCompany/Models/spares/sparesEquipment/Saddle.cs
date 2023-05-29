@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
-namespace practice_TrekCompany.Models.sparesEquipment
+namespace practice_TrekCompany.Models.spares.sparesEquipment
 {
     public class Saddle
     {
