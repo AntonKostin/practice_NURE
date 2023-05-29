@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
-namespace practice_TrekCompany.Models.sparesTransmition
+namespace practice_TrekCompany.Models.spares.sparesTransmition
 {
     public class Shifter
     {
