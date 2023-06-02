@@ -8,6 +8,8 @@ namespace practice_TrekCompany.Models.factory
         //Модель для таблицы factory.Staff
         [Key]
         public int staffId { get; set; }
+        public string firstName { get; set; }
+        public string secondName { get; set; }
         //Подключение модели
         [ForeignKey("Factory")]
         public int factoryId { get; set; }
