@@ -1,4 +1,7 @@
-﻿@*
+﻿@using practice_TrekCompany.Models.production;
+@model Bike
+
+@*
     For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 *@
 @{
@@ -8,22 +11,21 @@
 <!-- Page Content -->
 <div class="container">
 
-    <!-- Portfolio Item Heading -->
+    <!-- Portfolio Item Heading -->      
     <h1 class="my-4">
-        Trek Marlin 4
-        <small>Gen 2</small>
+        Категорія: @Model.TypeOfBike.typeName
     </h1>
 
     <!-- Portfolio Item Row -->
     <div class="row">
 
         <div class="col-md-8">
-            <img class="img-fluid" src="https://ukrbike.com.ua/assets/cache/images/2022/marlin4_22_29759_a_portrait-1000x-e54.jpg" alt="Image1">
+            <img class="img-fluid" src="@Model.bikeImage" alt="Image1">
         </div>
 
         <div class="col-md-4">
-            <h3 class="my-3">Model.Title</h3>
-            <p>Класичний гірський велосипед Trek Marlin 4 із оновленою рамою. Троси приховані всередині рами, зручне та практичне рішення, яке притаманне більш дорогим моделям. Добре знайома серія жіночих велосипедів Marlin WSD припиняє своє існування. Моделі не ділитимуться на чоловічі та жіночі, натомість кількість кольорових рішень для кожної з версій збільшилась. Рами у ростовках XS і S мають колеса 27.5 дюймів і занижену верхню трубу, що значно полегшує експлуатацію велосипеду райдерами із зростом до 165 см. Всі інші ростовки мають пряму верхню трубу і 29-дюймові колеса. Передбачені кріплення для встановлення багажника та підніжки.</p>
+            <h3 class="my-3">@Model.bikeName</h3>
+            <p>@Model.bikeDescription</p>
         </div>
 
     </div>
@@ -36,21 +38,145 @@
             <tbody>
                 <tr>
                     <tH scope="row">Розміри</tH>
-                    <td>Колеса 27.5": XS, S. Колеса 29": M, M/L, L, XL, XXL</td>
+                    <td>@Model.Wheelset.Rim.rimName, @Model.Wheelset.Rim.rimDescription</td>
                 </tr>
                 <tr>
-                <th scope="row">Рама</th>
-                <td>
-                    Alpha Silver Aluminium, внутрішнє проведення тросів перемикачів, гідролінії заднього гальма та дроппер-посту, інтегроване кріплення підніжки та багажника
-                </td>
+                    <th scope="row">Рама</th>
+                    <td>@Model.Frameset.Frame.frameName, @Model.Frameset.Frame.frameDescription</td>
                 </tr>
                 <tr>
-                <th scope="row">Вилка</th>
-                <td>SR Suntour XCE 28, пружинна, регулювання навантаження, хід 100 мм ( у розмірі XS - хід 80 мм)</td>
+                    <th scope="row">Вилка</th>
+                    <td>@Model.Frameset.Fork.forkName, @Model.Frameset.Fork.forkDescription</td>
+            </tbody>
+        </table>
+    </div>
+    <!-- /.row -->
+    <!-- /.row -->
+    <!-- Related Projects Row -->
+    <h3 class="my-4">Колеса</h3>
+
+    <div class="row">
+        <table class="table">
+            <tbody>
+                <tr>
+                    <tH scope="row">Втулки</tH>
+                    <td>@Model.Wheelset.Hub.hubName, @Model.Wheelset.Hub.hubDescription</td>
+                </tr>
+                <tr>
+                    <th scope="row">Ободи</th>
+                    <td>@Model.Wheelset.Rim.rimName, @Model.Wheelset.Rim.rimDescription</td>
+                </tr>
+                <tr>
+                    <th scope="row">Покришки</th>
+                    <td>@Model.Wheelset.Tire.tireName, @Model.Wheelset.Tire.tireDescription</td>
                 </tr>
             </tbody>
         </table>
     </div>
     <!-- /.row -->
+    <!-- /.row -->
+    <!-- Related Projects Row -->
+    <h3 class="my-4">Ходова</h3>
 
+    <div class="row">
+        <table class="table">
+            <tbody>
+                <tr>
+                    <tH scope="row">Шифтери</tH>
+                    <td>@Model.Groopset.Transmition.Shifter.shifterName</td>
+                </tr>
+                <tr>
+                    <th scope="row">П.перемикач</th>
+                    <td>@Model.Groopset.Transmition.Switch.switchName</td>
+                </tr>
+                <tr>
+                    <th scope="row">З.перемикач</th>
+                    <td>@Model.Groopset.Transmition.Switch.switchName</td>
+                </tr>
+                <tr>
+                    <th scope="row">Касета</th>
+                    <td>@Model.Groopset.Transmition.Cassette.cassetteName</td>
+                </tr>
+                <tr>
+                    <th scope="row">Каретка</th>
+                    <td>@Model.Groopset.Carriage.carriageName</td>
+                </tr>
+                <tr>
+                    <th scope="row">Педалі</th>
+                    <td>@Model.Groopset.Pedals.pedalsName</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <!-- /.row -->
+    <!-- /.row -->
+    <!-- Related Projects Row -->
+    <h3 class="my-4">Компоненти</h3>
+
+    <div class="row">
+        <table class="table">
+            <tbody>
+                <tr>
+                    <tH scope="row">Гальма</tH>
+                    <td>@Model.Equipment.Brake.brakeName</td>
+                </tr>
+                <tr>
+                    <th scope="row">Сідло</th>
+                    <td>@Model.Equipment.Saddle.saddleName</td>
+                </tr>
+                <tr>
+                    <th scope="row">Підсідельний штир</th>
+                    <td>@Model.Equipment.SeatPost.seatPostName</td>
+                </tr>
+                <tr>
+                    <th scope="row">Винос</th>
+                    <td>@Model.Equipment.Stem.stemName</td>
+                </tr>
+                <tr>
+                    <th scope="row">Кермо</th>
+                    <td>@Model.Equipment.Steering.steeringName</td>
+                </tr>
+                <tr>
+                    <th scope="row">Грипси</th>
+                    <td>@Model.Equipment.Handlebar.handlbarName</td>
+                </tr>
+                <tr>
+                    <th scope="row">Рульова</th>
+                    <td>@Model.Equipment.Grips.gripsName</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <!-- /.row -->
+    <!-- /.row -->
+    <!-- Related Projects Row -->
+
+
+
+
+    <div class="row">
+        <table class="table">
+            <tbody>
+                <tr>
+                    <tH scope="row">Вага</tH>
+                    <td>@Model.bikeWeight кг</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <!-- /.row -->
+    <!-- /.row -->
+    <!-- Related Projects Row -->
+
+    <div class="row">
+        <table class="table">
+            <tbody>
+                <tr>
+                    <tH scope="row">Ціна</tH>
+                    <td>@Model.bikePrice грн</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <!-- /.row -->
 </div>
