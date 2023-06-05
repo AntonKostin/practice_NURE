@@ -1,4 +1,8 @@
-﻿@*
+﻿@using practice_TrekCompany.Models.factory
+@model IEnumerable<Staff>
+
+
+@*
     For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 *@
 @{
@@ -17,15 +21,23 @@
                 <th scope="col">Виробництво</th>
             </tr>
         </thead>
-        <tbody>
-            <tr>
-                <th scope="row">1</th>
-                <td>Шевченко</td>
-                <td>Тарас</td>
-                <td>посада</td>
-                <td>Виробництво</td>
-            </tr>
-        </tbody>
+
+        @{ int i = 1; }
+
+        @foreach (var staff in Model)
+        {
+            <tbody>
+                <tr>
+                    <th scope="row">@i</th>
+                    <td>@staff.secondName</td>
+                    <td>@staff.firstName</td>
+                    <td>@staff.JobTitle.jobTitle</td>
+                    <td>@staff.Factory.factoryId</td>
+                </tr>
+                @{ i++; }
+            </tbody>
+        }
+        
     </table>
 
 </div>
