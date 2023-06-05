@@ -42,7 +42,8 @@ namespace practice_TrekCompany.Controllers
                 .Include(a => a.Equipment.SeatPost)
                 .Include(a => a.Equipment.Steering)
                 .Include(a => a.Equipment.Stem)
-                .Include(a => a.TypeOfBike).FirstOrDefault(c => c.bikeId == id);
+                .Include(a => a.TypeOfBike)
+                .FirstOrDefault(c => c.bikeId == id);
             return View(bike);
         }
     }

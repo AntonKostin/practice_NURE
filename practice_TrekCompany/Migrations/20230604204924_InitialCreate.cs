@@ -316,6 +316,8 @@ namespace practice_TrekCompany.Migrations
                 {
                     staffId = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
+                    firstName = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    secondName = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     factoryId = table.Column<int>(type: "int", nullable: false),
                     jobTitleId = table.Column<int>(type: "int", nullable: false)
                 },

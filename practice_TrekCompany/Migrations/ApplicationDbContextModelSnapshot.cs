@@ -73,8 +73,16 @@ namespace practice_TrekCompany.Migrations
                     b.Property<int>("factoryId")
                         .HasColumnType("int");
 
+                    b.Property<string>("firstName")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<int>("jobTitleId")
                         .HasColumnType("int");
+
+                    b.Property<string>("secondName")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
 
                     b.HasKey("staffId");
 

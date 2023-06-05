@@ -8,6 +8,6 @@ namespace practice_TrekCompany.Models.spares.sparesGroopset
         [Key]
         public int pedalsId { get; set; }
         public string pedalsName { get; set; }
-        public string pedalsQuantity { get; set; }
+        public int pedalsQuantity { get; set; }
     }
 }
