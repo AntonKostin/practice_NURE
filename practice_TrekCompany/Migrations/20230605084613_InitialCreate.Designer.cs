@@ -11,7 +11,7 @@ using practice_TrekCompany.Data;
 namespace practice_TrekCompany.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20230529194758_InitialCreate")]
+    [Migration("20230605084613_InitialCreate")]
     partial class InitialCreate
     {
         /// <inheritdoc />
@@ -76,8 +76,16 @@ namespace practice_TrekCompany.Migrations
                     b.Property<int>("factoryId")
                         .HasColumnType("int");
 
+                    b.Property<string>("firstName")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<int>("jobTitleId")
                         .HasColumnType("int");
+
+                    b.Property<string>("secondName")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
 
                     b.HasKey("staffId");
 
