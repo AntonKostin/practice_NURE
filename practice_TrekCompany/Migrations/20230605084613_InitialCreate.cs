@@ -156,7 +156,7 @@ namespace practice_TrekCompany.Migrations
                     pedalsId = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
                     pedalsName = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    pedalsQuantity = table.Column<string>(type: "nvarchar(max)", nullable: false)
+                    pedalsQuantity = table.Column<int>(type: "int", nullable: false)
                 },
                 constraints: table =>
                 {
