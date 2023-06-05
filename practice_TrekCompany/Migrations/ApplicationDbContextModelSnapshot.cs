@@ -492,9 +492,9 @@ namespace practice_TrekCompany.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("pedalsQuantity")
+                    b.Property<int>("pedalsQuantity")
                         .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                        .HasColumnType("int");
 
                     b.HasKey("pedalsId");
 
