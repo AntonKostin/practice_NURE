@@ -11,7 +11,11 @@ using practice_TrekCompany.Data;
 namespace practice_TrekCompany.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
+<<<<<<<< HEAD:practice_TrekCompany/Migrations/20230604204924_InitialCreate.Designer.cs
+    [Migration("20230604204924_InitialCreate")]
+========
     [Migration("20230605084613_InitialCreate")]
+>>>>>>>> 42a5322641dc10c3463d8b624f0dfafd77ef2832:practice_TrekCompany/Migrations/20230605084613_InitialCreate.Designer.cs
     partial class InitialCreate
     {
         /// <inheritdoc />
