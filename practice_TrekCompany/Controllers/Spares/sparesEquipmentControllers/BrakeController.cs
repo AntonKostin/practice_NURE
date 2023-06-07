@@ -15,8 +15,7 @@ namespace practice_TrekCompany.Controllers.Spares.sparesEquipmentControllers
              }
             public IActionResult Index()
             {
-                List<Brake> brakes = _context.Brakes
-                  .Include(a => a.brakeName).ToList();
+                List<Brake> brakes = _context.Brakes.ToList();
                 return View(brakes);
             }
         }

@@ -1,10 +1,6 @@
-﻿@using practice_TrekCompany.Models.spares.sparesEquipment
-@using practice_TrekCompany.Models.spares.sparesFrameset
-@using practice_TrekCompany.Models.spares.sparesGroopset
-@using practice_TrekCompany.Models.spares.sparesTransmition
-@using practice_TrekCompany.Models.spares.sparesWheelset
+﻿@using practice_TrekCompany.Models.spares.sparesWheelset
 @using practice_TrekCompany.Models.spares
-@model IEnumerable<Brake>
+@model IEnumerable<Rim>
 
 
 @*
@@ -29,18 +25,18 @@
             int i = 1;
         }
 
-        @foreach (var brake in Model)
+        @foreach (var rim in Model)
         {
-                <tbody>
-                    <tr>
-                        <th scope="row">@i</th>
-                        <td>@brake.brakeName</td>
-                        <td>"-"</td>
-                    </tr>
+                                <tbody>
+                                    <tr>
+                                        <th scope="row">@i</th>
+                                        <td>@rim.rimName</td>
+                                        <td>@rim.rimQuantity</td>
+                                    </tr>
                 @{
                     i++;
                 }
-                </tbody>
+                                </tbody>
         }
 
     </table>
