@@ -8,19 +8,19 @@ namespace practice_TrekCompany.Models.spares.sparesGroopset
     {
         //Модель для таблицы sparesGroopset.Transmition
         [Key]
-        public int transmitionId { get; set; }
+        public int TransmitionId { get; set; }
         //Подключение модели
         [ForeignKey("Cassette")]
-        public int cassetteId { get; set; }
+        public int CassetteId { get; set; }
         public Cassette Cassette { get; set; }
         //Подключение модели
         [ForeignKey("Switch")]
-        public int switchId { get; set; }
+        public int SwitchId { get; set; }
         public Switch Switch { get; set; }
         //Подключение модели
         [ForeignKey("Shifter")]
-        public int shifterId { get; set; }
+        public int ShifterId { get; set; }
         public Shifter Shifter { get; set; }
-        public int transmitionQuantity { get; set; }
+        public int TransmitionQuantity { get; set; }
     }
 }

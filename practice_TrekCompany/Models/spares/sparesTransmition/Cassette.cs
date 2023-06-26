@@ -6,8 +6,8 @@ namespace practice_TrekCompany.Models.spares.sparesTransmition
     {
         //Модель для таблицы sparesTransmition.Cassette
         [Key]
-        public int cassetteId { get; set; }
-        public string cassetteName { get; set; }
+        public int CassetteId { get; set; }
+        public string CassetteName { get; set; }
 
     }
 }

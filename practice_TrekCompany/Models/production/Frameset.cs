@@ -8,12 +8,12 @@ namespace practice_TrekCompany.Models.production
     public class Frameset
     {
         [Key]
-        public int framesetId { get; set; }
+        public int FramesetId { get; set; }
         [ForeignKey("Frame")]
-        public int frameId { get; set; }
+        public int FrameId { get; set; }
         public Frame Frame { get; set; }
         [ForeignKey("Fork")]
-        public int forkId { get; set; }
+        public int ForkId { get; set; }
         public Fork Fork { get; set; }
     }
 }

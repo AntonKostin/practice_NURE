@@ -7,26 +7,26 @@ namespace practice_TrekCompany.Models.production
     public class Bike
     {
         [Key]
-        public int bikeId { get; set; }
-        public string bikeName { get; set; }
-        public string bikeImage { get; set; }
-        public string bikeDescription { get; set; }
-        public int bikePrice { get; set; }
-        public float bikeWeight { get; set; }
+        public int BikeId { get; set; }
+        public string BikeName { get; set; }
+        public string BikeImage { get; set; }
+        public string BikeDescription { get; set; }
+        public int BikePrice { get; set; }
+        public float BikeWeight { get; set; }
         [ForeignKey("Frameset")]
-        public int framesetId { get; set; }
+        public int FramesetId { get; set; }
         public Frameset Frameset { get; set; }
         [ForeignKey("Wheelset")]
-        public int wheelsetId { get; set; }
+        public int WheelsetId { get; set; }
         public Wheelset Wheelset { get; set; }
         [ForeignKey("Groopset")]
-        public int groopsetId { get; set; }
+        public int GroopsetId { get; set; }
         public Groopset Groopset { get; set; }
         [ForeignKey("Equipment")]
-        public int equipmentId { get; set; }
+        public int EquipmentId { get; set; }
         public Equipment Equipment { get; set; }
         [ForeignKey("TypeOfBike")]
-        public int typeOfBikeId { get; set; }
+        public int TypeOfBikeId { get; set; }
         public TypeOfBike TypeOfBike { get; set; }
     }
 }

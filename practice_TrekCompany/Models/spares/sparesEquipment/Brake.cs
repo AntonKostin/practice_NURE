@@ -6,7 +6,7 @@ namespace practice_TrekCompany.Models.spares.sparesEquipment
     {
         //Модель для таблицы sparesEquipment.Brake
         [Key]
-        public int brakeId { get; set; }
-        public string brakeName { get; set; }
+        public int BrakeId { get; set; }
+        public string BrakeName { get; set; }
     }
 }

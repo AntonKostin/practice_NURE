@@ -7,15 +7,15 @@ namespace practice_TrekCompany.Models.production
     public class Groopset
     {
         [Key]
-        public int groopsetId { get; set; }
+        public int GroopsetId { get; set; }
         [ForeignKey("Transmition")]
-        public int transmitionId { get; set; }
+        public int TransmitionId { get; set; }
         public Transmition Transmition { get; set; }
         [ForeignKey("Carriage")]
-        public int carriageId { get; set; }
+        public int CarriageId { get; set; }
         public Carriage Carriage { get; set; }
         [ForeignKey("Pedals")]
-        public int pedalsId { get; set; }
+        public int PedalsId { get; set; }
         public Pedals Pedals { get; set; }
     }
 }

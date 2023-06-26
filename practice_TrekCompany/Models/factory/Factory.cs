@@ -6,9 +6,9 @@ namespace practice_TrekCompany.Models.factory
     {
         //Модель для таблицы factory.Factory
         [Key]
-        public int factoryId { get; set; }
-        public string city { get; set; }
-        public string street { get; set; }
-        public int zipCode { get; set; }
+        public int FactoryId { get; set; }
+        public string City { get; set; }
+        public string Street { get; set; }
+        public int ZipCode { get; set; }
     }
 }

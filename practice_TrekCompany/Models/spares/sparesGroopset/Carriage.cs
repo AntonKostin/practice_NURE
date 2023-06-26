@@ -6,8 +6,8 @@ namespace practice_TrekCompany.Models.spares.sparesGroopset
     {
         //Модель для таблицы sparesGroopset.Carriage
         [Key]
-        public int carriageId { get; set; }
-        public string carriageName { get; set; }
-        public int carriageQuantity { get; set; }
+        public int CarriageId { get; set; }
+        public string CarriageName { get; set; }
+        public int CarriageQuantity { get; set; }
     }
 }

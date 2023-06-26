@@ -6,8 +6,8 @@ namespace practice_TrekCompany.Models.spares.sparesGroopset
     {
         //Модель для таблицы sparesGroopset.Pedals
         [Key]
-        public int pedalsId { get; set; }
-        public string pedalsName { get; set; }
-        public int pedalsQuantity { get; set; }
+        public int PedalsId { get; set; }
+        public string PedalsName { get; set; }
+        public int PedalsQuantity { get; set; }
     }
 }

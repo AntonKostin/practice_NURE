@@ -6,9 +6,9 @@ namespace practice_TrekCompany.Models.spares.sparesWheelset
     {
         //Модель для таблицы sparesWheelset.Rim
         [Key]
-        public int rimId { get; set; }
-        public string rimName { get; set; }
-        public string rimDescription { get; set; }
-        public int rimQuantity { get; set; }
+        public int RimId { get; set; }
+        public string RimName { get; set; }
+        public string RimDescription { get; set; }
+        public int RimQuantity { get; set; }
     }
 }

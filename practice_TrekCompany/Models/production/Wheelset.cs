@@ -8,15 +8,15 @@ namespace practice_TrekCompany.Models.production
     public class Wheelset
     {
         [Key]
-        public int wheelsetId { get; set; }
+        public int WheelsetId { get; set; }
         [ForeignKey("Hub")]
-        public int hubId { get; set; }
+        public int HubId { get; set; }
         public Hub Hub { get; set; }
         [ForeignKey("Rim")]
-        public int rimId { get; set; }
+        public int RimId { get; set; }
         public Rim Rim { get; set; }
         [ForeignKey("Tire")]
-        public int tireId { get; set; }
+        public int TireId { get; set; }
         public Tire Tire { get; set; }
     }
 }

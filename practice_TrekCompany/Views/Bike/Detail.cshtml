@@ -13,19 +13,19 @@
 
     <!-- Portfolio Item Heading -->      
     <h1 class="my-4">
-        Категорія: @Model.TypeOfBike.typeName
+        Категорія: @Model.TypeOfBike.TypeName
     </h1>
 
     <!-- Portfolio Item Row -->
     <div class="row">
 
         <div class="col-md-8">
-            <img class="img-fluid" src="@Model.bikeImage" alt="Image1">
+            <img class="img-fluid" src="@Model.BikeImage" alt="Image1">
         </div>
 
         <div class="col-md-4">
-            <h3 class="my-3">@Model.bikeName</h3>
-            <p>@Model.bikeDescription</p>
+            <h3 class="my-3">@Model.BikeName</h3>
+            <p>@Model.BikeDescription</p>
         </div>
 
     </div>
@@ -38,15 +38,15 @@
             <tbody>
                 <tr>
                     <tH scope="row">Розміри</tH>
-                    <td>@Model.Wheelset.Rim.rimName, @Model.Wheelset.Rim.rimDescription</td>
+                    <td>@Model.Wheelset.Rim.RimName, @Model.Wheelset.Rim.RimDescription</td>
                 </tr>
                 <tr>
                     <th scope="row">Рама</th>
-                    <td>@Model.Frameset.Frame.frameName, @Model.Frameset.Frame.frameDescription</td>
+                    <td>@Model.Frameset.Frame.FrameName, @Model.Frameset.Frame.FrameDescription</td>
                 </tr>
                 <tr>
                     <th scope="row">Вилка</th>
-                    <td>@Model.Frameset.Fork.forkName, @Model.Frameset.Fork.forkDescription</td>
+                    <td>@Model.Frameset.Fork.ForkName, @Model.Frameset.Fork.ForkDescription</td>
             </tbody>
         </table>
     </div>
@@ -60,15 +60,15 @@
             <tbody>
                 <tr>
                     <tH scope="row">Втулки</tH>
-                    <td>@Model.Wheelset.Hub.hubName, @Model.Wheelset.Hub.hubDescription</td>
+                    <td>@Model.Wheelset.Hub.HubName, @Model.Wheelset.Hub.HubDescription</td>
                 </tr>
                 <tr>
                     <th scope="row">Ободи</th>
-                    <td>@Model.Wheelset.Rim.rimName, @Model.Wheelset.Rim.rimDescription</td>
+                    <td>@Model.Wheelset.Rim.RimName, @Model.Wheelset.Rim.RimDescription</td>
                 </tr>
                 <tr>
                     <th scope="row">Покришки</th>
-                    <td>@Model.Wheelset.Tire.tireName, @Model.Wheelset.Tire.tireDescription</td>
+                    <td>@Model.Wheelset.Tire.TireName, @Model.Wheelset.Tire.TireDescription</td>
                 </tr>
             </tbody>
         </table>
@@ -83,27 +83,27 @@
             <tbody>
                 <tr>
                     <tH scope="row">Шифтери</tH>
-                    <td>@Model.Groopset.Transmition.Shifter.shifterName</td>
+                    <td>@Model.Groopset.Transmition.Shifter.ShifterName</td>
                 </tr>
                 <tr>
                     <th scope="row">П.перемикач</th>
-                    <td>@Model.Groopset.Transmition.Switch.switchName</td>
+                    <td>@Model.Groopset.Transmition.Switch.SwitchName</td>
                 </tr>
                 <tr>
                     <th scope="row">З.перемикач</th>
-                    <td>@Model.Groopset.Transmition.Switch.switchName</td>
+                    <td>@Model.Groopset.Transmition.Switch.SwitchName</td>
                 </tr>
                 <tr>
                     <th scope="row">Касета</th>
-                    <td>@Model.Groopset.Transmition.Cassette.cassetteName</td>
+                    <td>@Model.Groopset.Transmition.Cassette.CassetteName</td>
                 </tr>
                 <tr>
                     <th scope="row">Каретка</th>
-                    <td>@Model.Groopset.Carriage.carriageName</td>
+                    <td>@Model.Groopset.Carriage.CarriageName</td>
                 </tr>
                 <tr>
                     <th scope="row">Педалі</th>
-                    <td>@Model.Groopset.Pedals.pedalsName</td>
+                    <td>@Model.Groopset.Pedals.PedalsName</td>
                 </tr>
             </tbody>
         </table>
@@ -118,31 +118,31 @@
             <tbody>
                 <tr>
                     <tH scope="row">Гальма</tH>
-                    <td>@Model.Equipment.Brake.brakeName</td>
+                    <td>@Model.Equipment.Brake.BrakeName</td>
                 </tr>
                 <tr>
                     <th scope="row">Сідло</th>
-                    <td>@Model.Equipment.Saddle.saddleName</td>
+                    <td>@Model.Equipment.Saddle.SaddleName</td>
                 </tr>
                 <tr>
                     <th scope="row">Підсідельний штир</th>
-                    <td>@Model.Equipment.SeatPost.seatPostName</td>
+                    <td>@Model.Equipment.SeatPost.SeatPostName</td>
                 </tr>
                 <tr>
                     <th scope="row">Винос</th>
-                    <td>@Model.Equipment.Stem.stemName</td>
+                    <td>@Model.Equipment.Stem.StemName</td>
                 </tr>
                 <tr>
                     <th scope="row">Кермо</th>
-                    <td>@Model.Equipment.Steering.steeringName</td>
+                    <td>@Model.Equipment.Steering.SteeringName</td>
                 </tr>
                 <tr>
                     <th scope="row">Грипси</th>
-                    <td>@Model.Equipment.Handlebar.handlbarName</td>
+                    <td>@Model.Equipment.Handlebar.HandlbarName</td>
                 </tr>
                 <tr>
                     <th scope="row">Рульова</th>
-                    <td>@Model.Equipment.Grips.gripsName</td>
+                    <td>@Model.Equipment.Grips.GripsName</td>
                 </tr>
             </tbody>
         </table>
@@ -151,6 +151,6 @@
     <!-- /.row -->
     <!-- Related Projects Row -->
     <br />
-    <p><b>Вага</b> @Model.bikeWeight кг<hr /></p>
-    <p><b>Ціна</b> @Model.bikePrice грн<hr /></p>
+    <p><b>Вага</b> @Model.BikeWeight кг<hr /></p>
+    <p><b>Ціна</b> @Model.BikePrice грн<hr /></p>
 </div>

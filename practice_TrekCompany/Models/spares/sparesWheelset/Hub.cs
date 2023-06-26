@@ -6,9 +6,9 @@ namespace practice_TrekCompany.Models.spares.sparesWheelset
     {
         //Модель для таблицы sparesWheelset.Hub
         [Key]
-        public int hubId { get; set; }
-        public string hubName { get; set; }
-        public string hubDescription { get; set; }
-        public int hubQuantity { get; set; }
+        public int HubId { get; set; }
+        public string HubName { get; set; }
+        public string HubDescription { get; set; }
+        public int HubQuantity { get; set; }
     }
 }

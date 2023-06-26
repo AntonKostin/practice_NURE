@@ -6,7 +6,7 @@ namespace practice_TrekCompany.Models.factory
     {
         //Модель для таблицы factory.JobTitle
         [Key]
-        public int jobTitleId { get; set; }
-        public string jobTitle { get; set; }
+        public int JobTitleId { get; set; }
+        public string JobTitle { get; set; }
     }
 }

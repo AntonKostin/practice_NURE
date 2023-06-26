@@ -5,7 +5,7 @@ namespace practice_TrekCompany.Models.production
     public class TypeOfBike
     {
         [Key]
-        public int typeOfBikeId { get; set; }
-        public string typeName { get; set; }
+        public int TypeOfBikeId { get; set; }
+        public string TypeName { get; set; }
     }
 }

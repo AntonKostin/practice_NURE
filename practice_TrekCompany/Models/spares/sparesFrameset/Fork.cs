@@ -6,9 +6,9 @@ namespace practice_TrekCompany.Models.spares.sparesFrameset
     {
         //Модель для таблицы sparesFrameset.Fork
         [Key]
-        public int forkId { get; set; }
-        public string forkName { get; set; }
-        public string forkDescription { get; set; }
-        public int forkQuantity { get; set; }
+        public int ForkId { get; set; }
+        public string ForkName { get; set; }
+        public string ForkDescription { get; set; }
+        public int ForkQuantity { get; set; }
     }
 }

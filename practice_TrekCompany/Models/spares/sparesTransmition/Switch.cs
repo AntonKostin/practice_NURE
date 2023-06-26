@@ -6,7 +6,7 @@ namespace practice_TrekCompany.Models.spares.sparesTransmition
     {
         //Модель для таблицы sparesTransmition.Switch
         [Key]
-        public int switchId { get; set; }
-        public string switchName { get; set; }
+        public int SwitchId { get; set; }
+        public string SwitchName { get; set; }
     }
 }

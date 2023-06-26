@@ -6,9 +6,9 @@ namespace practice_TrekCompany.Models.spares.sparesFrameset
     {
         //Модель для таблицы sparesFrameset.Frame
         [Key]
-        public int frameId { get; set; }
-        public string frameName { get; set; }
-        public string frameDescription { get; set; }
-        public int frameQuantity { get; set; }
+        public int FrameId { get; set; }
+        public string FrameName { get; set; }
+        public string FrameDescription { get; set; }
+        public int FrameQuantity { get; set; }
     }
 }
